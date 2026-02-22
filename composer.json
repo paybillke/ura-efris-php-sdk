@@ -1,38 +1,69 @@
 {
-    "name": "paybilldev/ura-efris-sdk",
-    "description": "A PHP SDK for integrating with the Uganda Revenue Authority (URA) Electronic Fiscal Receipting and Invoicing System (efris) API",
-    "type": "library",
-    "license": "MIT",
-    "autoload": {
-        "psr-4": {
-            "UraEfrisSdk\\": "src/"
-        }
-    },
-    "authors": [
-        {
-        "name": "Emmanuel Bartile",
-        "email": "ebartile@gmail.com"
-        }
-    ],
-    "minimum-stability": "stable",
-    "require": {
-        "ext-openssl": "*",
-        "ext-dom": "*",
-        "tcdent/php-restclient": "0.1.8.2",
-        "ext-curl": "*",
-        "symfony/serializer": "v7.0.7",
-        "symfony/property-access": "v7.0.7",
-        "symfony/property-info": "v7.0.7",
-        "illuminate/support": "^12.17"
-    },
-    "require-dev": {
-        "phpunit/phpunit": "10.0.18"
-    },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "UraEfrisSdk\\Providers\\SerializerServiceProvider"
-            ]
-        }
+  "name": "paybilldev/ura-efris-sdk",
+  "description": "PHP SDK for Uganda Revenue Authority (URA) EFRIS System-to-System (S2S) API integration",
+  "type": "library",
+  "license": "MIT",
+
+  "keywords": [
+    "ura",
+    "efris",
+    "uganda",
+    "tax",
+    "einvoicing",
+    "fiscal",
+    "sdk",
+    "api"
+  ],
+
+  "authors": [
+    {
+      "name": "Emmanuel Bartile",
+      "email": "support@paybill.dev",
+      "role": "Lead Developer"
     }
+  ],
+
+  "autoload": {
+    "psr-4": {
+      "UraEfrisSdk\\": "src/"
+    }
+  },
+
+  "autoload-dev": {
+    "psr-4": {
+      "UraEfrisSdk\\Tests\\": "tests/"
+    }
+  },
+
+  "require": {
+    "php": "^8.0",
+    "ext-json": "*",
+    "ext-curl": "*",
+    "ext-openssl": "*",
+    "respect/validation": "^2.4",
+    "guzzlehttp/guzzle": "^7.0",
+    "psr/log": "^3.0"
+  },
+
+  "require-dev": {
+    "phpunit/phpunit": "^10.0",
+    "friendsofphp/php-cs-fixer": "^3.0",
+    "phpstan/phpstan": "^1.10",
+    "mockery/mockery": "^1.6"
+  },
+
+  "scripts": {
+    "test": "phpunit",
+    "analyse": "phpstan analyse",
+    "format": "php-cs-fixer fix"
+  },
+
+  "extra": {
+    "branch-alias": {
+      "dev-main": "0.1-dev"
+    }
+  },
+
+  "minimum-stability": "stable",
+  "prefer-stable": true
 }

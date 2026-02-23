@@ -67,7 +67,7 @@ Issue Date: 19/07/2022
 Install via **Composer**:
 
 ```bash
-composer require paybillke/ura-efris-sdk
+composer require paybilldev/ura-efris-sdk
 ```
 
 ---
